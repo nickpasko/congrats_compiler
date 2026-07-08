@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Greetings Studio</title>
+  <title>Студия AI-поздравлений</title>
   <style>
     :root {
       color-scheme: light;
@@ -586,29 +586,29 @@
   <div class="shell">
     <header class="topbar">
       <div>
-        <h1>AI Greetings Studio</h1>
-        <p class="subtitle">Admin panel for AI-generated celebrity greetings</p>
+        <h1>Студия AI-поздравлений</h1>
+        <p class="subtitle">Админ-панель AI-видеопоздравлений от звёзд</p>
       </div>
-      <div class="eyebrow" aria-label="Application is running in demo mode">Demo Mode</div>
+      <div class="eyebrow" aria-label="Приложение работает в демо-режиме">Демо-режим</div>
     </header>
 
     <main class="panel">
       <div class="wizard">
-        <aside class="steps" aria-label="Workflow progress">
+        <aside class="steps" aria-label="Прогресс сценария">
           <section class="step" data-step="1">
             <div class="step-index">1</div>
-            <h2>Greeting Parameters</h2>
-            <p>Choose the artist and configure the recipient details.</p>
+            <h2>Параметры поздравления</h2>
+            <p>Выберите звезду и настройте параметры получателя.</p>
           </section>
           <section class="step" data-step="2">
             <div class="step-index">2</div>
-            <h2>Preview</h2>
-            <p>Review the generated greeting message before creating the video.</p>
+            <h2>Предпросмотр</h2>
+            <p>Проверьте текст поздравления перед созданием видео.</p>
           </section>
           <section class="step" data-step="3">
             <div class="step-index">3</div>
-            <h2>Result</h2>
-            <p>Download, copy a demo link, or start another greeting flow.</p>
+            <h2>Результат</h2>
+            <p>Скачайте, скопируйте демо-ссылку или начните новый сценарий.</p>
           </section>
         </aside>
 
@@ -616,70 +616,70 @@
           <section class="section-card" aria-labelledby="parameters-title">
             <div class="section-head">
               <div>
-                <h2 id="parameters-title">Greeting Parameters</h2>
-                <p>Build a polished greeting experience with realistic wizard-style feedback.</p>
+                <h2 id="parameters-title">Параметры поздравления</h2>
+                <p>Соберите поздравление с реалистичным пошаговым процессом.</p>
               </div>
             </div>
 
             <div class="grid">
               <div class="field">
-                <label for="artist">Celebrity</label>
+                <label for="artist">Звезда</label>
                 <select id="artist" name="artist">
-                  <option value="">Select a celebrity</option>
+                  <option value="">Выберите звезду</option>
                 </select>
                 <div class="error-text" id="artist-error" aria-live="polite"></div>
               </div>
 
               <div class="field">
-                <label for="recipient">Recipient name</label>
-                <input id="recipient" name="recipient" type="text" placeholder="John" autocomplete="off">
+                <label for="recipient">Имя получателя</label>
+                <input id="recipient" name="recipient" type="text" placeholder="Иван" autocomplete="off">
                 <div class="error-text" id="recipient-error" aria-live="polite"></div>
               </div>
 
               <div class="field">
-                <label for="occasion">Occasion</label>
-                <input id="occasion" name="occasion" type="text" placeholder="Birthday" autocomplete="off">
+                <label for="occasion">Повод</label>
+                <input id="occasion" name="occasion" type="text" placeholder="День рождения" autocomplete="off">
                 <div class="error-text" id="occasion-error" aria-live="polite"></div>
               </div>
 
               <div class="field">
-                <label for="tone">Tone</label>
+                <label for="tone">Тон</label>
                 <select id="tone" name="tone"></select>
                 <div class="error-text" id="tone-error" aria-live="polite"></div>
               </div>
 
               <div class="field span-2">
-                <label for="duration">Video length</label>
+                <label for="duration">Длительность видео</label>
                 <select id="duration" name="duration"></select>
-                <div class="helper-text">Use preview first to confirm the message before generating the video.</div>
+                <div class="helper-text">Сначала сделайте предпросмотр, чтобы проверить текст перед генерацией видео.</div>
               </div>
             </div>
 
             <div class="actions">
-              <button class="button button-secondary" id="preview-button" type="button">Preview</button>
-              <button class="button button-primary" id="create-button" type="button" disabled>Create Video</button>
+              <button class="button button-secondary" id="preview-button" type="button">Предпросмотр</button>
+              <button class="button button-primary" id="create-button" type="button" disabled>Создать видео</button>
             </div>
           </section>
 
           <section class="section-card hidden" id="preview-section" aria-labelledby="preview-title">
             <div class="section-head">
               <div>
-                <h2 id="preview-title">Greeting Preview</h2>
-                <p>Generated from templates using the selected artist, tone, and occasion.</p>
+                <h2 id="preview-title">Предпросмотр поздравления</h2>
+                <p>Сгенерировано по шаблону с учётом выбранной звезды, тона и повода.</p>
               </div>
             </div>
 
             <div class="preview-card">
               <p class="preview-text" id="preview-text"></p>
-              <div class="success-note">✓ Preview generated successfully</div>
+              <div class="success-note">✓ Предпросмотр успешно создан</div>
             </div>
           </section>
 
           <section class="section-card hidden" id="loading-section" aria-labelledby="loading-title">
             <div class="section-head">
               <div>
-                <h2 id="loading-title">Creating Video</h2>
-                <p>Your demo request is being processed through the simulated production pipeline.</p>
+                <h2 id="loading-title">Создание видео</h2>
+                <p>Ваш демо-запрос обрабатывается в имитации продакшн-пайплайна.</p>
               </div>
             </div>
 
@@ -688,7 +688,7 @@
                 <div class="progress-fill" id="progress-fill"></div>
               </div>
               <div class="loading-summary">
-                <strong id="loading-status">Preparing prompt...</strong>
+                <strong id="loading-status">Подготавливаем сценарий...</strong>
                 <span class="loading-status" id="loading-percent">0%</span>
               </div>
             </div>
@@ -697,8 +697,8 @@
           <section class="section-card hidden" id="result-section" aria-labelledby="result-title">
             <div class="section-head">
               <div>
-                <h2 id="result-title">Generated Video</h2>
-                <p>The prototype now behaves like a finished admin workflow, ready for backend integration.</p>
+                <h2 id="result-title">Сгенерированное видео</h2>
+                <p>Прототип работает как завершённый админ-сценарий и готов к интеграции с бэкендом.</p>
               </div>
             </div>
 
@@ -707,30 +707,30 @@
                 <div class="thumbnail-content">
                   <div class="play"></div>
                   <h3 id="thumbnail-artist"></h3>
-                  <p>AI Video Preview</p>
+                  <p>Превью AI-видео</p>
                 </div>
               </div>
 
               <div class="result-top">
                 <div>
-                  <h3 id="result-video-title">Greeting video</h3>
-                  <p class="helper-text">Professionally staged with realistic metadata and next steps.</p>
+                  <h3 id="result-video-title">Видео-поздравление</h3>
+                  <p class="helper-text">Сформировано с реалистичными метаданными и следующими шагами.</p>
                 </div>
-                <div class="status-badge">Ready</div>
+                <div class="status-badge">Готово</div>
               </div>
 
               <dl class="meta">
-                <div><dt>Artist</dt><dd id="meta-artist"></dd></div>
-                <div><dt>Occasion</dt><dd id="meta-occasion"></dd></div>
-                <div><dt>Tone</dt><dd id="meta-tone"></dd></div>
-                <div><dt>Length</dt><dd id="meta-duration"></dd></div>
-                <div><dt>Creation time</dt><dd id="meta-time"></dd></div>
+                <div><dt>Звезда</dt><dd id="meta-artist"></dd></div>
+                <div><dt>Повод</dt><dd id="meta-occasion"></dd></div>
+                <div><dt>Тон</dt><dd id="meta-tone"></dd></div>
+                <div><dt>Длительность</dt><dd id="meta-duration"></dd></div>
+                <div><dt>Время создания</dt><dd id="meta-time"></dd></div>
               </dl>
 
               <div class="result-actions">
-                <button class="button button-primary" id="download-button" type="button">Download</button>
-                <button class="button button-secondary" id="copy-link-button" type="button">Copy Link</button>
-                <button class="button button-ghost" id="reset-button" type="button">Create Another</button>
+                <button class="button button-primary" id="download-button" type="button">Скачать</button>
+                <button class="button button-secondary" id="copy-link-button" type="button">Скопировать ссылку</button>
+                <button class="button button-ghost" id="reset-button" type="button">Создать ещё</button>
               </div>
             </div>
           </section>
@@ -743,64 +743,64 @@
 
   <div class="modal-backdrop hidden" id="modal-backdrop" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <h2 id="modal-title">Demo mode</h2>
-      <p>This is a frontend prototype. Video generation is not implemented.</p>
-      <button class="button button-primary" id="modal-close-button" type="button">Got it</button>
+      <h2 id="modal-title">Демо-режим</h2>
+      <p>Это фронтенд-прототип. Генерация видео пока не реализована.</p>
+      <button class="button button-primary" id="modal-close-button" type="button">Понятно</button>
     </div>
   </div>
 
   <script>
     // Configuration
     const artists = [
-      "Arnold Schwarzenegger",
-      "Keanu Reeves",
-      "Elon Musk",
-      "Morgan Freeman",
-      "Jackie Chan",
-      "Tom Hanks",
-      "Robert Downey Jr."
+      "Арнольд Шварценеггер",
+      "Киану Ривз",
+      "Илон Маск",
+      "Морган Фримен",
+      "Джеки Чан",
+      "Том Хэнкс",
+      "Роберт Дауни — младший"
     ];
 
-    const tones = ["Warm", "Funny", "Formal", "Motivational", "Friendly"];
-    const durations = ["15 sec", "30 sec", "45 sec"];
+    const tones = ["Тёплый", "Смешной", "Официальный", "Мотивирующий", "Дружелюбный"];
+    const durations = ["15 сек", "30 сек", "45 сек"];
     const loadingStages = [
-      "Preparing prompt...",
-      "Generating avatar...",
-      "Synthesizing voice...",
-      "Rendering video...",
-      "Finalizing..."
+      "Подготавливаем сценарий...",
+      "Генерируем аватар...",
+      "Синтезируем голос...",
+      "Рендерим видео...",
+      "Завершаем..."
     ];
 
     const greetingTemplates = {
-      Warm: [
-        "Happy {occasion}, {recipient}!",
-        "Today is a beautiful moment to celebrate you, and I wanted to send something truly special.",
-        "May this next chapter bring joy, calm, and memorable moments with the people who matter most.",
-        "Enjoy every second of your celebration."
+      "Тёплый": [
+        "С {occasion}, {recipient}!",
+        "Сегодня прекрасный повод поздравить тебя и отправить что-то по-настоящему особенное.",
+        "Пусть новый этап принесёт радость, спокойствие и яркие моменты рядом с близкими людьми.",
+        "Наслаждайся каждой минутой праздника."
       ],
-      Funny: [
-        "Happy {occasion}, {recipient}!",
-        "I heard there was a celebration happening, so naturally I had to make a dramatic entrance.",
-        "May your day be packed with laughs, questionable dance moves, and zero boring speeches.",
-        "Go enjoy your spotlight—you have absolutely earned it."
+      "Смешной": [
+        "С {occasion}, {recipient}!",
+        "Я услышал, что тут праздник, и, конечно, не мог не появиться эффектно.",
+        "Пусть день будет полон смеха, странных танцев и ноль скучных тостов.",
+        "Зажигай — сегодня твой день."
       ],
-      Formal: [
-        "Congratulations on your {occasion}, {recipient}.",
-        "I wanted to take a moment to recognize this important occasion and send my best regards.",
-        "May the year ahead be marked by continued success, happiness, and meaningful accomplishments.",
-        "Please accept my sincere wishes for an excellent celebration."
+      "Официальный": [
+        "Поздравляю с {occasion}, {recipient}.",
+        "Хочу отметить это важное событие и передать вам наилучшие пожелания.",
+        "Пусть впереди вас ждут успех, благополучие и значимые достижения.",
+        "Примите мои искренние поздравления."
       ],
-      Motivational: [
-        "Happy {occasion}, {recipient}!",
-        "This milestone is a reminder of how far you have come and how much potential still lies ahead.",
-        "Keep showing up with courage, discipline, and belief in what you can build next.",
-        "Celebrate today, then keep going strong."
+      "Мотивирующий": [
+        "С {occasion}, {recipient}!",
+        "Эта дата — напоминание о том, как много уже пройдено и сколько возможностей ещё впереди.",
+        "Продолжай действовать смело, дисциплинированно и с верой в себя.",
+        "Отмечай сегодня — и двигайся дальше к новым вершинам."
       ],
-      Friendly: [
-        "Happy {occasion}, {recipient}!",
-        "Just dropping in with a cheerful message to make your day a little brighter.",
-        "I hope this occasion brings plenty of smiles, good energy, and moments worth remembering.",
-        "Have an amazing celebration and enjoy every bit of it."
+      "Дружелюбный": [
+        "С {occasion}, {recipient}!",
+        "Заглянул с тёплым поздравлением, чтобы сделать твой день ещё ярче.",
+        "Пусть этот праздник принесёт много улыбок, хорошего настроения и приятных сюрпризов.",
+        "Классного тебе праздника и отличного настроения!"
       ]
     };
 
@@ -905,7 +905,7 @@
         });
 
       elements.createButton.disabled = !state.previewGenerated || state.loading;
-      elements.createButton.textContent = state.loading ? "Creating..." : "Create Video";
+      elements.createButton.textContent = state.loading ? "Создаём..." : "Создать видео";
 
       Object.entries(elements.errors).forEach(([key, node]) => {
         const message = state.errors[key] || "";
@@ -948,15 +948,15 @@
     // Validation
     function validateField(key) {
       if (key === "artist" && !state.selectedArtist) {
-        return "Please select a celebrity.";
+        return "Пожалуйста, выберите звезду.";
       }
 
       if (key === "recipientName" && !state.recipientName.trim()) {
-        return "Recipient name is required.";
+        return "Введите имя получателя.";
       }
 
       if (key === "occasion" && !state.occasion.trim()) {
-        return "Occasion is required.";
+        return "Введите повод.";
       }
 
       return "";
@@ -1010,18 +1010,18 @@
 
     function generatePreviewText() {
       const lines = greetingTemplates[state.tone].map(replaceTokens);
-      return `${lines.join("\n\n")}\n\nYour friend,\n\n${state.selectedArtist}`;
+      return `${lines.join("\n\n")}\n\nТвой друг,\n\n${state.selectedArtist}`;
     }
 
     function createResult() {
       return {
-        title: `${titleCase(state.occasion)} greeting for ${titleCase(state.recipientName)}`,
+        title: `Поздравление с "${titleCase(state.occasion)}" для ${titleCase(state.recipientName)}`,
         artist: state.selectedArtist,
         occasion: titleCase(state.occasion),
         tone: state.tone,
         duration: state.duration,
-        creationTime: new Date().toLocaleTimeString([], {
-          hour: "numeric",
+        creationTime: new Date().toLocaleTimeString("ru-RU", {
+          hour: "2-digit",
           minute: "2-digit"
         }),
         fakeUrl: `https://demo.local/video/${Math.floor(10000 + Math.random() * 90000)}`
@@ -1132,7 +1132,7 @@
         helper.remove();
       }
 
-      showToast("Link copied.");
+      showToast("Ссылка скопирована.");
     }
 
     // Events
@@ -1171,7 +1171,7 @@
     }
 
     function initialize() {
-      populateSelect(elements.artist, artists, "Select a celebrity");
+      populateSelect(elements.artist, artists, "Выберите звезду");
       populateSelect(elements.tone, tones);
       populateSelect(elements.duration, durations);
       render();
